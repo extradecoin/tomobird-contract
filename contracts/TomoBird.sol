@@ -115,7 +115,7 @@ contract TomoBird is Owner,DSSafeAddSub {
     
     function updateScore(uint score) public {
         Bird bird = players[msg.sender];
-        bird.score = score;
+        bird.score = bird.score + score;
         emit UpdateScore(msg.sender, score);
     }
 
